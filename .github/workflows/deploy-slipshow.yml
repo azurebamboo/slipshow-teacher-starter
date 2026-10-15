@@ -1,0 +1,58 @@
+name: Compile Slipshow & Deploy to Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: # Allows manual trigger from the Actions tab
+
+# Grant permissions for GitHub Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 2. Download and Install Slipshow
+        run: |
+          curl -sL https://github.com/panglesd/slipshow/releases/latest/download/slipshow-linux-x86_64.tar | tar -x
+          sudo mv bin/slipshow /usr/local/bin/
+          slipshow --version
+
+      - name: 3. Compile Markdown Presentations to HTML
+        run: |
+          mkdir -p _site
+          # Compiles all .md presentations (excluding README.md) into HTML
+          for file in *.md; do
+            if [ -f "$file" ] && [ "$file" != "README.md" ]; then
+              filename="${file%.md}"
+              echo "Compiling $file -> _site/${filename}.html"
+              slipshow compile "$file" -o "_site/${filename}.html"
+            fi
+          done
+          # If presentation.html exists, make it the default index.html for the root URL
+          if [ -f "_site/presentation.html" ]; then
+            cp "_site/presentation.html" "_site/index.html"
+          fi
+
+      - name: 4. Upload Compiled Artifact for Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+      - name: 5. Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
