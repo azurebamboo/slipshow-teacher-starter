@@ -47,6 +47,13 @@ jobs:
           if [ -f "_site/presentation.html" ]; then
             cp "_site/presentation.html" "_site/index.html"
           fi
+          # Copy any images or media folders into _site so local assets deploy cleanly
+          for dir in images assets img media; do
+            [ -d "$dir" ] && cp -r "$dir" _site/
+          done
+          for ext in png jpg jpeg svg gif webp; do
+            cp *.$ext _site/ 2>/dev/null || true
+          done
 
       - name: 4. Upload Compiled Artifact for Pages
         uses: actions/upload-pages-artifact@v3
