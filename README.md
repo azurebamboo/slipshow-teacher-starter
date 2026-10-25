@@ -91,5 +91,5 @@ The cloud workflow compiles every `.md` file automatically:
 | **Zoom In** | `{pause focus=element-id}` | Zoom into a specific primary source phrase or vocabulary term |
 | **Zoom Out** | `{pause unfocus}` | Return the camera to full canvas overview |
 | **Semantic Callout** | `{.definition title="..."}` | Highlight core civic terms, theorems, or DBQ prompts |
-| **Mermaid Flowchart** | ````mermaid ... ```` | Draw inspectable branching decision trees and causality maps |
+| **Mermaid Flowchart** | ```` =mermaid ... ```` | Draw inspectable branching decision trees and causality maps |
 | **LaTeX Math** | `$P(\text{tyranny}) \downarrow$` | Formalize constitutional theory, economics, or polling data |

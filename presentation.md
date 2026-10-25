@@ -147,7 +147,7 @@ A non-linear Digital Humanities masterclass and civic inquiry into the geometry 
 
 ---
 
-{pause up=title-slip}
+{pause up=anatomy-section}
 
 {#anatomy-section}
 # Act I: The Crisis of 1787 & The Anatomy of Faction
@@ -202,7 +202,7 @@ A faction acts against the long-term survival, stability, and public welfare of 
 
 ---
 
-{pause up=anatomy-section}
+{pause up=diagnostic-tree-section}
 
 {#diagnostic-tree-section}
 # Act II: Madison's Diagnostic Tree
@@ -212,7 +212,7 @@ How do we solve this mortal disease? Madison applies rigorous Enlightenment logi
 
 {pause}
 
-```mermaid
+``` =mermaid
 graph TD
     F[The Mischiefs of Faction] --> B1[Method I: Remove the Causes]
     F --> B2[Method II: Control the Effects]
@@ -262,7 +262,7 @@ graph TD
 
 ---
 
-{pause up=diagnostic-tree-section}
+{pause up=extended-republic-section}
 
 {#extended-republic-section}
 # Act III: The Geometry of the Extended Republic
@@ -315,7 +315,7 @@ Notice Madison's two-part physical defense:
 
 ---
 
-{pause up=extended-republic-section}
+{pause up=historiographical-audit-section}
 
 {#historiographical-audit-section}
 # Act IV: Historiographical Audit
@@ -355,7 +355,7 @@ Unlike PowerPoint slides that hide conflicting historical voices behind isolated
 
 ---
 
-{pause up=historiographical-audit-section}
+{pause up=tiered-scaffolds-section}
 
 {#tiered-scaffolds-section}
 # Act V: Tiered Classroom Scaffolding
@@ -395,7 +395,7 @@ Educators must bridge the gap between complex 18th-century prose and diverse 21s
 
 ---
 
-{pause up=tiered-scaffolds-section}
+{pause up=digital-public-square-section}
 
 {#digital-public-square-section}
 # Act VI: The 21st-Century Crucible
@@ -405,7 +405,7 @@ Does James Madison's 1787 constitutional hypothesis survive the internet age?
 
 {pause}
 
-```mermaid
+``` =mermaid
 graph LR
     subgraph S1787 ["1787 Physical Republic"]
         D1[Physical Distance] --> F1[High Communication Friction]
@@ -458,7 +458,7 @@ When recommender algorithms curate engagement-maximizing feeds:
 
 ---
 
-{pause up=digital-public-square-section}
+{pause up=slipshow-power-section}
 
 {#slipshow-power-section}
 # Epilogue: Why Slipshow Over PowerPoint?
