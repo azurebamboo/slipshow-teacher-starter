@@ -48,6 +48,8 @@ It demonstrates six key capabilities of Slipshow that **PowerPoint and Google Sl
 2. Click on `presentation.md`.
 3. Click the **Pencil icon** (Edit this file).
 4. Paste your primary source notes or AI-generated Slipshow Markdown.
+   > 💡 **Tip: Turning your notes into Slipshow with AI?**  
+   > Open [**`RECIPE.md`**](RECIPE.md) in this repo, copy the prompt recipe into ChatGPT, Claude, Gemini, or Copilot with your raw lesson plan or primary source text, and paste the generated Markdown straight into `presentation.md`!
 5. Scroll down and click the green **Commit changes** button.
 
 ### Step 4: View Your Live Presentation
@@ -93,3 +95,5 @@ The cloud workflow compiles every `.md` file automatically:
 | **Semantic Callout** | `{.definition title="..."}` | Highlight core civic terms, theorems, or DBQ prompts |
 | **Mermaid Flowchart** | ```` =mermaid ... ```` | Draw inspectable branching decision trees and causality maps |
 | **LaTeX Math** | `$P(\text{tyranny}) \downarrow$` | Formalize constitutional theory, economics, or polling data |
+
+For full reference, check the [Official Slipshow Syntax Tutorial](https://docs.slipshow.org/en/stable/tutorial.html#slipshow-syntax) or copy our ready-to-use AI prompt from [**`RECIPE.md`**](RECIPE.md).
